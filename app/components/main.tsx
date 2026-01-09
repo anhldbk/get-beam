@@ -29,7 +29,7 @@ export default function Component({ className = "" }: MainProps) {
               Private File Transfer Using QR Codes
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              Anonymous, offline file sharing with no internet, no servers, no trace.
+              Open-source, anonymous, offline file sharing with no internet, no servers, no trace.
             </p>
             {
               /* <div className="mt-10 flex items-center justify-center gap-x-6">
