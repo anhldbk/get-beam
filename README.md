@@ -88,6 +88,10 @@ npm test
 - **[Protocol Specification](docs/beam.md):** Detailed breakdown of the Beam QR File Transfer Protocol, including message formats, state machines, and error handling.
 - **[Library Implementation](app/lib/beam/README.md):** technical details of the TypeScript implementation of the protocol.
 
+## Contributing
+
+Contributions are welcome! Whether it's reporting a bug, suggesting a feature, or submitting a pull request, your help is appreciated. Please feel free to open an issue or submit a PR.
+
 ## License
 
 [MIT](LICENSE)
