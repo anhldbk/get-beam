@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Homepage - High priority for privacy file transfer -->
+  <url>
+    <loc>https://get-beam.vercel.app/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://get-beam.vercel.app/og-image.png</image:loc>
+      <image:caption>Beam - Private QR Code File Transfer</image:caption>
+      <image:title>Private File Transfer Using QR Codes without leaving a trace</image:title>
+    </image:image>
+  </url>
+
+  <!-- About page - Key for SEO content -->
+  <url>
+    <loc>https://get-beam.vercel.app/about</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Future privacy-focused landing pages -->
+  <url>
+    <loc>https://get-beam.vercel.app/privacy</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://get-beam.vercel.app/security</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://get-beam.vercel.app/guide</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

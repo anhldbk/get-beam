@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Privacy-focused file transfer application
+# High-priority pages for SEO
+Allow: /about
+Allow: /privacy
+Allow: /security
+
+# Static assets
+Allow: /images/
+Allow: /icons/
+Allow: /*.css
+Allow: /*.js
+
+# Block any potential sensitive areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/chunks/
+
+# Sitemap location
+Sitemap: https://get-beam.vercel.app/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

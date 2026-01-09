@@ -1,0 +1,47 @@
+@startuml
+autonumber
+
+box "app1"
+participant App1 order 10  
+participant Beam1 order 20
+participant Vision1 order 30
+end box
+
+box "app2"
+participant Vision2 order 40
+participant Beam2  order 50
+participant App2 order 60
+end box
+
+App2 -> Beam2: recv()
+
+App1 -> Beam1: send(pkg)
+Beam1 -> Beam1: block1 = pkg.getNextBlock()
+Beam1 -> Vision1: send(block1)
+Vision1 -> Vision2: ...
+
+alt loop
+    Beam2 -> Vision2: recv()
+    Vision2 --> Beam2: block1
+
+    alt if block1.meta.kind==EVENT_DATA
+        Beam2 -> Beam2: store = getBlockStorage(block1)
+        Beam2 -> Beam2: store.set(block.meta.block, block.data)
+        
+        alt if final block:
+            Beam2 -> Beam2: data = store.getAll()
+        end
+    end
+
+    alt if hasNextBlock(block1)
+        Beam2 -> Beam2: block2 = new Block(data=null, meta={block+1, session, kind=EVENT_NEXT})
+        Beam2 -> Vision2: send(block2)
+
+    end
+
+end
+
+Vision2 -> Vision1: ...
+Beam1 -> Vision1: recv()
+Vision1 --> Beam1: block2
+@enduml
