@@ -19,15 +19,12 @@ export default function Component() {
         <Navbar.Link as={Link} href={homepage} >
           Home
         </Navbar.Link>
-        {/* <Navbar.Link href="#">Pricing</Navbar.Link> */}
+        <Navbar.Link as={Link} href="https://github.com/anhldbk/get-beam" target="_blank">
+          GitHub
+        </Navbar.Link>
         <Navbar.Link as={Link} href="/about">
           About
         </Navbar.Link>
-        <Navbar.Link as={Link} href="https://chat.whatsapp.com/ER9s5LBtcz49xVA7pOpB1H" target="_blank">
-          Support
-        </Navbar.Link>
-        {/* <Navbar.Link href="#">Services</Navbar.Link> */}
-        {/* <Navbar.Link href="#">Contact</Navbar.Link> */}
       </Navbar.Collapse>
     </Navbar >
   );
