@@ -3,7 +3,6 @@ import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
 import tailwind from "eslint-plugin-tailwindcss";
 import js from "@eslint/js";
-import ts from "typescript-eslint";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,12 +12,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [".next/", "build/", "dist/"],
+  },
   // add eslint built-in
   js.configs.recommended,
-  // add `typescript-eslint` flat config simply
-  // if you would like use more another configuration,
-  // see the section: https://typescript-eslint.io/getting-started#details
-  ...ts.configs.recommended,  
   
   ...compat.extends("next/core-web-vitals", "next/typescript",),
   ...tailwind.configs["flat/recommended"],
